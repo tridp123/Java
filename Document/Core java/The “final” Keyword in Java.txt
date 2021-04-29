@@ -1,0 +1,31 @@
+Mặc dù tính kế thừa cho phép sử dụng lại code, nhưng khi bạn muốn giới hạn về khả năng mở rộng.
+
+final keyword means for classes, methods, and variables.
+
+1. Final Classes
+String là 1 final class
+Các class khác không thể extends nó
+public class Test extends String{
+	private int a;
+}
+sẽ có lỗi 'The type Test cannot subclass the final class String'
+
+Lưu ý rằng từ khóa 'final' trong khai báo class không có nghĩa là các đối tượng của lớp này là bất biến. Chúng ta có thể thay đổi các trường của đối tượng Test một cách tự do:
+Test test = new Test();
+test.setA(1);
+
+Nếu lớp là final, chúng tôi không thể mở rộng nó để ghi đè phương thức và khắc phục sự cố. Nói cách khác, chúng ta mất khả năng mở rộng, một trong những lợi ích của lập trình hướng đối tượng.
+
+2. Final Methods
+Methods marked as final cannot be overridden.
+Khi mà chỉ cấm ghi đè 1 số phương thức của class thôi.
+
+
+3. Final Variables
+Khi một biến final được gán giá trị, nó sẽ không thể thay đổi được.
+
+- đối với biến là đối tượng thì vẫn có thể thay đổi properties của đối tượng đó, đương nhiên là ko thể gán lại 1 đối tượng khác.
+- Final fields can be either constants or write-once fields. fields static final được khởi tạo trước khi khởi tạo constructor
+- A final argument can’t be changed inside a method.
+
+

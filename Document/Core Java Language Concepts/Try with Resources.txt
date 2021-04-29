@@ -1,0 +1,33 @@
+có ở java 7
+
+Cho phép khai báo các tài nguyên sẽ được sử dụng trong khối try với sự đảm bảo rằng các tài nguyên sẽ bị close khi sau khi thực hiện khối đó.
+
+Các resource này must implement the AutoCloseable interface.
+
+Có thể sử dụng try với nhiều resource
+try (Scanner scanner = new Scanner(new File("testRead.txt"));
+    PrintWriter writer = new PrintWriter(new File("testWrite.txt"))) {
+    while (scanner.hasNext()) {
+	writer.print(scanner.nextLine());
+    }
+}
+
+Có thể custom hàm khi bỏ resource vào try
+public class MyResource implements AutoCloseable {
+    @Override
+    public void close() throws Exception {
+        System.out.println("Closed MyResource");
+    }
+}
+
+Từ java 9, sử dụng biến final để khai báo trong try
+
+
+final Scanner scanner = new Scanner(new File("testRead.txt"));
+PrintWriter writer = new PrintWriter(new File("testWrite.txt"))
+try (scanner;writer) { 
+    // omitted
+}
+
+biến writer ko phải là biến final nhưng nó không thay đổi sau lần gán đầu tiên nên vẫn có thể để trong try
+

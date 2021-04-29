@@ -1,0 +1,26 @@
+Trong môi trường đa luồng, điều kiện chạy đua xảy ra khi hai hoặc nhiều luồng cố gắng cập nhật dữ liệu chia sẻ có thể thay đổi cùng một lúc.
+
+The synchronized keyword can be used on different levels:
+
++ Instance methods
+public synchronized void synchronisedCalculate() {
+    setSum(getSum() + 1);
+}
+
++ Static methods
+public static synchronized void syncStaticCalculate() {
+     staticSum = staticSum + 1;
+}
+
+ 
++ Code blocks bên trong method
+public void performSynchronisedTask() {
+    synchronized (this) {
+        setCount(getCount()+1);
+    }
+}
+
+
+
+
+https://www.baeldung.com/java-synchronized

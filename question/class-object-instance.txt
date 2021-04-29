@@ -1,0 +1,8 @@
+Lớp là một bản vẽ xây dựng gồm có nét đậm, nét mảnh, nét đứt khúc, hình tròn, nét chấm, hình rẻ quạt… mỗi nhóm các hình đó lắp lại sẽ tượng trưng cho một vật trong thực tế căn nhà sẽ xây như: cột, tường, cửa, lan can, bệ xí…
+Đối tượng tất cả cái nhà nói chung mà bạn sẽ nhìn thấy trên thực tế cái mà được xây dựa trên bản vẽ vừa đề cập.
+Thực thể là cái nhà cụ thể của ông A, hay nhà bà B nào đó trong tập hợp những cái nhà “đối tượng” kể trên.
+
+Không rõ lập trình hướng đối tượng có bà con gì với việc phân loại sinh vật không?
+Lớp: động vật có vú
+Đối tượng: con người
+Thực thể: thằng cha Do Ngoc Anh.
