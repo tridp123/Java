@@ -1,0 +1,54 @@
+
+Trong lập trình Java, class, object và instance là những khái niệm cơ bản. Dưới đây là sự khác nhau giữa chúng:
+
+Class: Lớp (Class) là một khuôn mẫu hoặc bản thiết kế để tạo ra đối tượng. Nó cung cấp các thuộc tính và phương thức cho đối tượng.
+
+Object: Đối tượng (Object) là một thực thể được tạo ra từ một lớp. Nó có thể được sử dụng để truy cập các phương thức và thuộc tính được định nghĩa trong lớp.
+
+Instance: Thể hiện (Instance) là một đối tượng cụ thể được tạo ra từ một lớp. Mỗi thể hiện đều có trạng thái của nó riêng và có thể thực hiện các phương thức được định nghĩa trong lớp.
+
+Các khái niệm này có thể được giải thích rõ hơn thông qua ví dụ sau đây:
+public class Car {
+   String model;
+   int year;
+   
+   public void start() {
+      System.out.println("The car is starting.");
+   }
+}
+
+public class Main {
+   public static void main(String[] args) {
+      Car car1 = new Car();
+      car1.model = "Toyota";
+      car1.year = 2020;
+      car1.start();
+      
+      Car car2 = new Car();
+      car2.model = "Honda";
+      car2.year = 2022;
+      car2.start();
+   }
+}
+Class: Lớp Car được định nghĩa với hai thuộc tính model và year và một phương thức start().
+Object: Đối tượng car1 và car2 được tạo ra từ lớp Car.
+Instance: car1 và car2 là hai thể hiện của lớp Car. Mỗi thể hiện có trạng thái của nó riêng (model và year) và có thể thực hiện phương thức start().
+
+
+
+
+
+
+
+
+
+
+
+Lớp là một bản vẽ xây dựng gồm có nét đậm, nét mảnh, nét đứt khúc, hình tròn, nét chấm, hình rẻ quạt… mỗi nhóm các hình đó lắp lại sẽ tượng trưng cho một vật trong thực tế căn nhà sẽ xây như: cột, tường, cửa, lan can, bệ xí…
+Đối tượng tất cả cái nhà nói chung mà bạn sẽ nhìn thấy trên thực tế cái mà được xây dựa trên bản vẽ vừa đề cập.
+Thực thể là cái nhà cụ thể của ông A, hay nhà bà B nào đó trong tập hợp những cái nhà “đối tượng” kể trên.
+
+Không rõ lập trình hướng đối tượng có bà con gì với việc phân loại sinh vật không?
+Lớp: động vật có vú
+Đối tượng: con người
+Thực thể: thằng cha Do Ngoc Anh.
